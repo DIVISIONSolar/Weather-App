@@ -21,28 +21,34 @@ function App() {
     };
 
     return (
-        <div className="">
-            <div className="pt-12 mx-auto w-/3">
-                <h1 className="text-white font-abril-fatface font-rubik font-bold text-3xl text-center mb-12">
+        <div className=''>
+            <div className='pt-12 mx-auto w-/3'>
+                <h1 className='text-white font-abril-fatface font-rubik font-bold text-3xl text-center mb-12'>
                     Weather App
                 </h1>
-                <div className="flex justify-center p-6">
-                <input
-                    className="font-abril-fatface font-rubik py-2 pl-4 rounded-lg w-4/6 text-orange-500 text-lg outline-none"
-                    text="text"
-                    value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Enter City Name"
-                />
-                <button
-                    className="w-2/6 bg-orange-500 py-3 px-3 rounded-lg text-white font-abril-fatface font-rubik font-bold text-lg"
-                    onClick={handleSearch}
-                >
-                    Search
-                </button>
+                <div className='flex justify-center p-6'>
+                    <input
+                        className='font-abril-fatface font-rubik py-2 pl-4 rounded-lg w-4/6 text-orange-500 text-lg outline-none'
+                        text='text'
+                        value={search}
+                        onChange={(e) => setSearch(e.target.value)}
+                        placeholder='Enter City Name'
+                    />
+                    <button
+                        className='w-2/6 bg-orange-500 py-3 px-3 rounded-lg text-white font-abril-fatface font-rubik font-bold text-lg'
+                        onClick={handleSearch}
+                    >
+                        Search
+                    </button>
                 </div>
             </div>
             <Display data={data} />
+
+            <footer className='text-center text-black font-abril-fatface font-rubik text-lg mt-12'>
+                <p>Created by: <a className='font-bold' href='https://joshsevero.dev'>Josh Severo</a></p>
+                <p>Using: <a className='font-bold' href='https://weatherapi.com/'>Weather API</a></p>
+                <p>Open Source on: <a className='font-bold' href='https://github.com/DIVISIONSolar/Weather-App'>Github</a></p>
+            </footer>
         </div>
     );
 }
