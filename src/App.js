@@ -4,9 +4,10 @@ import Display from './Components/Display';
 function App() {
     const [search, setSearch] = React.useState('');
     const [data, setData] = React.useState({});
+    const API_KEY = '1b551357e49047a490f141406231403'
 
     const handleSearch = () => {
-        fetch(`https://api.weatherapi.com/v1/current.json?key=1b551357e49047a490f141406231403&q=${search}&aqi=no`)
+        fetch(`https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${search}&aqi=no`)
             .then(res => res.json())
             .then((data) => {
                 if (data.error === undefined) {
